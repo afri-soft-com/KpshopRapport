@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6803C442-24B9-4782-BC2D-EF183B71E1EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GoldenStarApplication</RootNamespace>
+    <AssemblyName>GoldenStarApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ManagedConnections, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SQLServer.ManagedDTS, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.2\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseGestionBrasimbaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseGestionBrasimbaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseKpDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseKpDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseKpDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseKpDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClasseSMS.cs" />
+    <Compile Include="ClassRequette.cs" />
+    <Compile Include="ClassVaribleGolbal.cs" />
+    <Compile Include="Comptabillite\FormCadre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormCadre.Designer.cs">
+      <DependentUpon>FormCadre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormClasse.Designer.cs">
+      <DependentUpon>FormClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormCompte.Designer.cs">
+      <DependentUpon>FormCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormCreerGroupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormCreerGroupe.Designer.cs">
+      <DependentUpon>FormCreerGroupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormCreerUnCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormCreerUnCompte.Designer.cs">
+      <DependentUpon>FormCreerUnCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormDetailMvtCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormDetailMvtCompte.designer.cs">
+      <DependentUpon>FormDetailMvtCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormDetailOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormDetailOperation.designer.cs">
+      <DependentUpon>FormDetailOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormGrandLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormGrandLivre.Designer.cs">
+      <DependentUpon>FormGrandLivre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormGroupeCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormGroupeCompte.Designer.cs">
+      <DependentUpon>FormGroupeCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBackUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBackUP.Designer.cs">
+      <DependentUpon>FormBackUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmballage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmballage.Designer.cs">
+      <DependentUpon>FormEmballage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExempleYan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExempleYan.Designer.cs">
+      <DependentUpon>FormExempleYan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopCategorieAticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopCategorieAticle.Designer.cs">
+      <DependentUpon>FormPopCategorieAticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopDepartement\FormAffectation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopDepartement\FormAffectation.Designer.cs">
+      <DependentUpon>FormAffectation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopDepartement\FormDepartementOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopDepartement\FormDepartementOperation.Designer.cs">
+      <DependentUpon>FormDepartementOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\ClasskpQuincaillerie.cs" />
+    <Compile Include="FormPopVente\FormAchaProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormAchaProduit.designer.cs">
+      <DependentUpon>FormAchaProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormAjoutCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormAjoutCategorie.Designer.cs">
+      <DependentUpon>FormAjoutCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormAproStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormAproStocks.Designer.cs">
+      <DependentUpon>FormAproStocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comptabillite\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comptabillite\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormMenuResultat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormMenuResultat.Designer.cs">
+      <DependentUpon>FormMenuResultat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormNouveauArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormNouveauArticle.Designer.cs">
+      <DependentUpon>FormNouveauArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormOparationVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormOparationVente.Designer.cs">
+      <DependentUpon>FormOparationVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormPaiment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormPaiment.Designer.cs">
+      <DependentUpon>FormPaiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormQte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormQte.Designer.cs">
+      <DependentUpon>FormQte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormVente1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormVente1.Designer.cs">
+      <DependentUpon>FormVente1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormAjouterLesComptes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormAjouterLesComptes.Designer.cs">
+      <DependentUpon>FormAjouterLesComptes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormCodeSecurite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormCodeSecurite.designer.cs">
+      <DependentUpon>FormCodeSecurite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormConfiguration.Designer.cs">
+      <DependentUpon>FormConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormInsertion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormInsertion.Designer.cs">
+      <DependentUpon>FormInsertion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormPopMouvementIntaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormPopMouvementIntaire.Designer.cs">
+      <DependentUpon>FormPopMouvementIntaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormPopPassageDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormPopPassageDate.Designer.cs">
+      <DependentUpon>FormPopPassageDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormPopStockChargment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormPopStockChargment.designer.cs">
+      <DependentUpon>FormPopStockChargment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormPopTaux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormPopTaux.Designer.cs">
+      <DependentUpon>FormPopTaux.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormRehercheEmballage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormRehercheEmballage.Designer.cs">
+      <DependentUpon>FormRehercheEmballage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormChangementPrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormChangementPrix.Designer.cs">
+      <DependentUpon>FormChangementPrix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormPasserLecriture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormPasserLecriture.Designer.cs">
+      <DependentUpon>FormPasserLecriture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormPopClient1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormPopClient1.Designer.cs">
+      <DependentUpon>FormPopClient1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormPopEnreClientEmbalage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormPopEnreClientEmbalage.Designer.cs">
+      <DependentUpon>FormPopEnreClientEmbalage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormPopMouvmentEmbalge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormPopMouvmentEmbalge.Designer.cs">
+      <DependentUpon>FormPopMouvmentEmbalge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormRecherCompte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormRecherCompte.Designer.cs">
+      <DependentUpon>FormRecherCompte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPop\FormVendeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPop\FormVendeur.Designer.cs">
+      <DependentUpon>FormVendeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRecherche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRecherche.Designer.cs">
+      <DependentUpon>FormRecherche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAcueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAcueil.Designer.cs">
+      <DependentUpon>FormAcueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCaisse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaisse.Designer.cs">
+      <DependentUpon>FormCaisse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormComptable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormComptable.Designer.cs">
+      <DependentUpon>FormComptable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGerance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGerance.Designer.cs">
+      <DependentUpon>FormGerance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEtat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEtat.Designer.cs">
+      <DependentUpon>FormEtat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopVente\FormParaVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopVente\FormParaVente.Designer.cs">
+      <DependentUpon>FormParaVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPassageRapport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPassageRapport.Designer.cs">
+      <DependentUpon>FormPassageRapport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopFact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopFact.Designer.cs">
+      <DependentUpon>FormPopFact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSmsRapport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSmsRapport.Designer.cs">
+      <DependentUpon>FormSmsRapport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStock.designer.cs">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStockExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStockExt.Designer.cs">
+      <DependentUpon>FormStockExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSupprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSupprimer.Designer.cs">
+      <DependentUpon>FormSupprimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTableauDebord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTableauDebord.Designer.cs">
+      <DependentUpon>FormTableauDebord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtilisateur.Designer.cs">
+      <DependentUpon>FormUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVente.Designer.cs">
+      <DependentUpon>FormVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_DBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_DBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_DBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_DBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_DBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_DBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LesClasses\ClassChargementDatagrig.cs" />
+    <Compile Include="LesClasses\ClassChargementdeCombo.cs" />
+    <Compile Include="LesClasses\ClassChargementRapport.cs" />
+    <Compile Include="LesClasses\ClassComptable.cs" />
+    <Compile Include="LesClasses\ClasseArticle.cs" />
+    <Compile Include="LesClasses\ClasseOperationMvt.cs" />
+    <Compile Include="LesClasses\ClasseRequetteDernier.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjetBatiment\ClassKpBatimentVariableGobal.cs" />
+    <Compile Include="ProjetBatiment\FormAjoutDetailEB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjoutDetailEB.Designer.cs">
+      <DependentUpon>FormAjoutDetailEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjouterMateriels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjouterMateriels.Designer.cs">
+      <DependentUpon>FormAjouterMateriels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjouterUnProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjouterUnProject.Designer.cs">
+      <DependentUpon>FormAjouterUnProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjoutEtatDeBesoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjoutEtatDeBesoin.Designer.cs">
+      <DependentUpon>FormAjoutEtatDeBesoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjoutLibele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAjoutLibele.Designer.cs">
+      <DependentUpon>FormAjoutLibele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAJoutLigneBudgjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormAJoutLigneBudgjet.Designer.cs">
+      <DependentUpon>FormAJoutLigneBudgjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormCaisse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormCaisse.Designer.cs">
+      <DependentUpon>FormCaisse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormCreerEtatBesoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormCreerEtatBesoin.Designer.cs">
+      <DependentUpon>FormCreerEtatBesoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormDetaillEB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormDetaillEB.Designer.cs">
+      <DependentUpon>FormDetaillEB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormLibeleDuProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormLibeleDuProjet.Designer.cs">
+      <DependentUpon>FormLibeleDuProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormLigneBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormLigneBudget.Designer.cs">
+      <DependentUpon>FormLigneBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjetBatiment\FormProjet.Designer.cs">
+      <DependentUpon>FormProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stock\FormFicheDeStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FormFicheDeStock.Designer.cs">
+      <DependentUpon>FormFicheDeStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\FormMvtStockEntreeSortie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FormMvtStockEntreeSortie.Designer.cs">
+      <DependentUpon>FormMvtStockEntreeSortie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\FormOparationVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FormOparationVente.designer.cs">
+      <DependentUpon>FormOparationVente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\FormOperationStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FormOperationStock.Designer.cs">
+      <DependentUpon>FormOperationStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\FormPopStockChargment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FormPopStockChargment.designer.cs">
+      <DependentUpon>FormPopStockChargment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\FormQte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FormQte.designer.cs">
+      <DependentUpon>FormQte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\FormStockDepot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\FormStockDepot.Designer.cs">
+      <DependentUpon>FormStockDepot.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Bra2\ReportdDeventeParSrd.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Bra2\ReportLeVenteCashEtCrediEtVersment.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Bra2\ReportSommaireStockChargementVenteParSrd.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Bra2\ReportSommaireStockChargementVenteParSrdTous.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Bra2\ReportSommaireStockChargementVenteParSrdTousSynthese.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Bra2\ReportTableauDebord.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Bra2\ReportTableauDebordUsd.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Report1.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\Report2.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportAyantRestourneZERO.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportBalandeDetailleUsd.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportBalandeSyntheseUsd.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportEmbalageSyntheseCroise.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportEmballageSommaireParAritcle.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportEmballageSommaireParAritcle2.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportEmballageSommaireParAritcleTousSynthese.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportEmballageSyntheseCroiseGeneral.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportEssai.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportFactureSansR.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportInvemtairePhysique.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportInvemtairePhysiqueCam.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportJournalEmballage.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportLeVenteCashEtCredit.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportListeDeClient.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReleveCaisse.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReleveCaisseUsd.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReleveEmbalageParClient.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReleveEmbalageParClientTous.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReleverRestourneMvtCpte.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReleverUsd.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReportReleverRestourne.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReportReleverRestourneDetail.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReportReleverRestourneSynthese.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportRestourneAimprimer.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportRestourneAimprimer2.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportSmsTous.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportSommaireStockChargement.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportSommaireStockChargementBonGratuit.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportStockParDepot.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportStockParDepotSynthese.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportVenteProduiParClients.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportFacture.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReleveFactureClient.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportSommaireMvtSeulement.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportSommaireStoctTouts.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\Report2.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportFact.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportFactueMedicament.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportListeMalade.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportListeService.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportListeDecompte.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportListeDesAricle.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportMvmtDeFiche.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportMvtSynthes.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportPaeServiceFact.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportParService.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportRecu.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportRecuCaisse.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportReleveClientParte.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\Report1.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportFactureAvecSolde - Backup.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportFactureAvecSolde.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportResultatEvolution.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportResultatSelonPeriode.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportTableauDebord.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportTableauDeResulta.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportVenteC.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportVenteParPeriode.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KPSHOP\ReportVenteParUtilisateur.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KP\KPb\ReportBudjetIinitial.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KP\KPb\ReportSuivieFin.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KP\ReportFacture.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\KP\ReportFacturePetiFoma.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Report1.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Report2.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Report3.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Report3_Stock.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportBalanceSynthes.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportCosommation.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportClientLoge.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportClientSortieAvecDette.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportEmballageSommaireParAritcleTous.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportFicheDestockParService.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportFicheStockParDate.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportJournal.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportReleveClientChambre.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportServicePourunePeriode.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportSmsRapport.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportSommairCompteService.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportSommairCompteTotal.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportSommaireCroise.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportSommaireStokEngros.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportSupprimer.rdlc" />
+    <EmbeddedResource Include="Comptabillite\FormCadre.resx">
+      <DependentUpon>FormCadre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormClasse.resx">
+      <DependentUpon>FormClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormCompte.resx">
+      <DependentUpon>FormCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormCreerGroupe.resx">
+      <DependentUpon>FormCreerGroupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormCreerUnCompte.resx">
+      <DependentUpon>FormCreerUnCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormDetailMvtCompte.resx">
+      <DependentUpon>FormDetailMvtCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormDetailOperation.resx">
+      <DependentUpon>FormDetailOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormGrandLivre.resx">
+      <DependentUpon>FormGrandLivre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormGroupeCompte.resx">
+      <DependentUpon>FormGroupeCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBackUP.resx">
+      <DependentUpon>FormBackUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmballage.resx">
+      <DependentUpon>FormEmballage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExempleYan.resx">
+      <DependentUpon>FormExempleYan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopCategorieAticle.resx">
+      <DependentUpon>FormPopCategorieAticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopDepartement\FormAffectation.resx">
+      <DependentUpon>FormAffectation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopDepartement\FormDepartementOperation.resx">
+      <DependentUpon>FormDepartementOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormAchaProduit.resx">
+      <DependentUpon>FormAchaProduit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormAjoutCategorie.resx">
+      <DependentUpon>FormAjoutCategorie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormAproStocks.resx">
+      <DependentUpon>FormAproStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comptabillite\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormMenuResultat.resx">
+      <DependentUpon>FormMenuResultat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormNouveauArticle.resx">
+      <DependentUpon>FormNouveauArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormOparationVente.resx">
+      <DependentUpon>FormOparationVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormPaiment.resx">
+      <DependentUpon>FormPaiment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormQte.resx">
+      <DependentUpon>FormQte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormVente1.resx">
+      <DependentUpon>FormVente1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormAjouterLesComptes.resx">
+      <DependentUpon>FormAjouterLesComptes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormChangementPrix.resx">
+      <DependentUpon>FormChangementPrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormCodeSecurite.resx">
+      <DependentUpon>FormCodeSecurite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormConfiguration.resx">
+      <DependentUpon>FormConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormInsertion.resx">
+      <DependentUpon>FormInsertion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormPasserLecriture.resx">
+      <DependentUpon>FormPasserLecriture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormPopClient1.resx">
+      <DependentUpon>FormPopClient1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormPopEnreClientEmbalage.resx">
+      <DependentUpon>FormPopEnreClientEmbalage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormPopMouvementIntaire.resx">
+      <DependentUpon>FormPopMouvementIntaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormPopMouvmentEmbalge.resx">
+      <DependentUpon>FormPopMouvmentEmbalge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormPopPassageDate.resx">
+      <DependentUpon>FormPopPassageDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormPopStockChargment.resx">
+      <DependentUpon>FormPopStockChargment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormPopTaux.resx">
+      <DependentUpon>FormPopTaux.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormRecherCompte.resx">
+      <DependentUpon>FormRecherCompte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormRehercheEmballage.resx">
+      <DependentUpon>FormRehercheEmballage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPop\FormVendeur.resx">
+      <DependentUpon>FormVendeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRecherche.resx">
+      <DependentUpon>FormRecherche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAcueil.resx">
+      <DependentUpon>FormAcueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCaisse.resx">
+      <DependentUpon>FormCaisse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormComptable.resx">
+      <DependentUpon>FormComptable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGerance.resx">
+      <DependentUpon>FormGerance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEtat.resx">
+      <DependentUpon>FormEtat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopVente\FormParaVente.resx">
+      <DependentUpon>FormParaVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPassageRapport.resx">
+      <DependentUpon>FormPassageRapport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopFact.resx">
+      <DependentUpon>FormPopFact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSmsRapport.resx">
+      <DependentUpon>FormSmsRapport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStock.resx">
+      <DependentUpon>FormStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStockExt.resx">
+      <DependentUpon>FormStockExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSupprimer.resx">
+      <DependentUpon>FormSupprimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTableauDebord.resx">
+      <DependentUpon>FormTableauDebord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtilisateur.resx">
+      <DependentUpon>FormUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVente.resx">
+      <DependentUpon>FormVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormAjoutDetailEB.resx">
+      <DependentUpon>FormAjoutDetailEB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormAjouterMateriels.resx">
+      <DependentUpon>FormAjouterMateriels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormAjouterUnProject.resx">
+      <DependentUpon>FormAjouterUnProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormAjoutEtatDeBesoin.resx">
+      <DependentUpon>FormAjoutEtatDeBesoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormAjoutLibele.resx">
+      <DependentUpon>FormAjoutLibele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormAJoutLigneBudgjet.resx">
+      <DependentUpon>FormAJoutLigneBudgjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormCaisse.resx">
+      <DependentUpon>FormCaisse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormCreerEtatBesoin.resx">
+      <DependentUpon>FormCreerEtatBesoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormDetaillEB.resx">
+      <DependentUpon>FormDetaillEB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormLibeleDuProjet.resx">
+      <DependentUpon>FormLibeleDuProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormLigneBudget.resx">
+      <DependentUpon>FormLigneBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjetBatiment\FormProjet.resx">
+      <DependentUpon>FormProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Stock\FormFicheDeStock.resx">
+      <DependentUpon>FormFicheDeStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FormMvtStockEntreeSortie.resx">
+      <DependentUpon>FormMvtStockEntreeSortie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FormOparationVente.resx">
+      <DependentUpon>FormOparationVente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FormOperationStock.resx">
+      <DependentUpon>FormOperationStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FormPopStockChargment.resx">
+      <DependentUpon>FormPopStockChargment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FormQte.resx">
+      <DependentUpon>FormQte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\FormStockDepot.resx">
+      <DependentUpon>FormStockDepot.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BaseGestionBrasimbaDataSet.xsc">
+      <DependentUpon>BaseGestionBrasimbaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseGestionBrasimbaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseGestionBrasimbaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseGestionBrasimbaDataSet.xss">
+      <DependentUpon>BaseGestionBrasimbaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseKpDataSet.xsc">
+      <DependentUpon>BaseKpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseKpDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseKpDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseKpDataSet.xss">
+      <DependentUpon>BaseKpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseKpDataSet1.xsc">
+      <DependentUpon>BaseKpDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BaseKpDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseKpDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseKpDataSet1.xss">
+      <DependentUpon>BaseKpDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\GoldenStarApplication.exe.config" />
+    <None Include="bin\Debug\GoldenStarApplication.vshost.exe.config" />
+    <None Include="bin\Debug\GoldenStarApplication.vshost.exe.manifest" />
+    <None Include="KPSHOP_DBDataSet.xsc">
+      <DependentUpon>KPSHOP_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_DBDataSet.xss">
+      <DependentUpon>KPSHOP_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet1.xsc">
+      <DependentUpon>KPSHOP_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_DBDataSet1.xss">
+      <DependentUpon>KPSHOP_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet2.xsc">
+      <DependentUpon>KPSHOP_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_DBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_DBDataSet2.xss">
+      <DependentUpon>KPSHOP_DBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet3.xsc">
+      <DependentUpon>KPSHOP_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_DBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_DBDataSet3.xss">
+      <DependentUpon>KPSHOP_DBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet4.xsc">
+      <DependentUpon>KPSHOP_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_DBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_DBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_DBDataSet4.xss">
+      <DependentUpon>KPSHOP_DBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\GoldenStarApplication.exe" />
+    <Content Include="bin\Debug\GoldenStarApplication.pdb" />
+    <Content Include="bin\Debug\GoldenStarApplication.vshost.exe" />
+    <Content Include="icon2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\Rapport\KPSHOP\Kp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryKpbatiment\LibraryKpbatiment.csproj">
+      <Project>{e8bcff88-f5f2-4923-9a98-f040e790ab57}</Project>
+      <Name>LibraryKpbatiment</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
