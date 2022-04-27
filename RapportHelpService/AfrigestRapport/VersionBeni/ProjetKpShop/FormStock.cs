@@ -5116,6 +5116,44 @@ namespace GoldenStarApplication
             }
         }
 
+        private void buttonListeArticles_Click(object sender, EventArgs e)
+        {
+            chargmentListeDesArticles();
+        }
+
+        // CHARGEMENT DES ARTICLES SELON LE DEPOTS
+        private void chargmentListeDesArticles()
+        {
+            try
+            {
+                //string codecl;
+
+                Connection_Data();
+                con.Open();
+
+                cmd.CommandText = "Proc_ListeDesArticles";
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Clear();
+                //cmd.Parameters.AddWithValue("@NumCompte", codecl);
+                //cmd.Parameters.AddWithValue("@date1", Convert.ToDateTime(tDateR1.Text));
+                //cmd.Parameters.AddWithValue("@date2", Convert.ToDateTime(tdateR2.Text));
+                da.Fill(dt);
+                con.Close();
+
+                string chiminRap = "Rapport/ReportListArticles.rdlc";
+                FormEtat fo = new FormEtat();
+
+                fo.chargemenentRapporteAveVDataSetPro(dt, chiminRap, "DataSet1");
+                fo.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
         private void bwChaCategorie_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
 

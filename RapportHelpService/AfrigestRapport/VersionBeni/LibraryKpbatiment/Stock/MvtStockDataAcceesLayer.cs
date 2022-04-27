@@ -36,5 +36,57 @@ namespace LibraryKpbatiment.Stock
             }
         }
 
+        public List<StockModel> listToutLesArticles()
+        {
+            using (SqlConnection Conn = new SqlConnection(ClassVariableGlobal.seteconnexion()))
+
+                try
+                {
+                    //Conn.Open();
+                    List<StockModel> _list = new List<StockModel>();
+
+                    if (Conn.State != System.Data.ConnectionState.Open)
+                        Conn.Open();
+
+
+                    //string s1 = "SELECT * FROM tCompte";
+                    string s1 = "Proc_ListeDesArticles";
+
+
+                    SqlCommand objCommand = new SqlCommand(s1, Conn);
+                    objCommand.CommandType = CommandType.StoredProcedure;
+                    //objCommand.Parameters.AddWithValue("@a", GroupeCompte);
+                    SqlDataReader _Reader = objCommand.ExecuteReader();
+
+                    while (_Reader.Read())
+                    {
+                        StockModel objCust = new StockModel();
+                        objCust.PrixAchat = Convert.ToDouble(_Reader["PrixAchat"]);
+                        objCust.Nombre = Convert.ToInt32(_Reader["Nombre"]);
+                        objCust.PrixVente = Convert.ToDouble(_Reader["PrixVente"]);
+                        objCust.DesegnationArticle = _Reader["DesegnationArticle"].ToString();
+
+                        _list.Add(objCust);
+                    }
+
+                    return _list;
+                }
+                catch
+                {
+                    throw;
+                }
+                finally
+                {
+                    if (Conn != null)
+                    {
+                        if (Conn.State == ConnectionState.Open)
+                        {
+                            Conn.Close();
+                            Conn.Dispose();
+                        }
+                    }
+                }
+        }
+
     }
 }

@@ -76,6 +76,7 @@
             this.dGcOMPTE.ReadOnly = true;
             this.dGcOMPTE.Size = new System.Drawing.Size(546, 68);
             this.dGcOMPTE.TabIndex = 0;
+            this.dGcOMPTE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGcOMPTE_CellContentClick);
             // 
             // NumCompte
             // 
@@ -123,6 +124,7 @@
             this.comboCompteDes.Name = "comboCompteDes";
             this.comboCompteDes.Size = new System.Drawing.Size(294, 21);
             this.comboCompteDes.TabIndex = 24;
+            this.comboCompteDes.SelectedIndexChanged += new System.EventHandler(this.comboCompteDes_SelectedIndexChanged);
             // 
             // comboCompte
             // 

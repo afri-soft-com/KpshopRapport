@@ -164,5 +164,15 @@ namespace GoldenStarApplication.Comptabillite
         {
 
         }
+
+        private void comboCompteDes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dGcOMPTE_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

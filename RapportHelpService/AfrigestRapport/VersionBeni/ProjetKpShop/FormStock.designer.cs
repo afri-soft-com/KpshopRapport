@@ -40,6 +40,7 @@
             this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.button37 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
             this.bVente = new System.Windows.Forms.Button();
             this.cbAfficherLesMenus = new System.Windows.Forms.CheckBox();
@@ -311,7 +312,7 @@
             this.bwEnreCompte = new System.ComponentModel.BackgroundWorker();
             this.bWchargementINFO = new System.ComponentModel.BackgroundWorker();
             this.BWinventaire = new System.ComponentModel.BackgroundWorker();
-            this.button37 = new System.Windows.Forms.Button();
+            this.buttonListeArticles = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -368,7 +369,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 27);
+            this.panel1.Size = new System.Drawing.Size(991, 27);
             this.panel1.TabIndex = 0;
             // 
             // tDateJ
@@ -411,7 +412,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(994, 594);
+            this.tabControl1.Size = new System.Drawing.Size(991, 637);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -425,7 +426,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 24);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(986, 566);
+            this.tabPage4.Size = new System.Drawing.Size(983, 609);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = " INFO GENERALE SU STOCK           ";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
@@ -490,6 +491,7 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.Controls.Add(this.buttonListeArticles);
             this.panel15.Controls.Add(this.button37);
             this.panel15.Controls.Add(this.button35);
             this.panel15.Controls.Add(this.bVente);
@@ -505,8 +507,23 @@
             this.panel15.Controls.Add(this.tdateR2);
             this.panel15.Location = new System.Drawing.Point(594, 46);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(329, 504);
+            this.panel15.Size = new System.Drawing.Size(331, 555);
             this.panel15.TabIndex = 36;
+            // 
+            // button37
+            // 
+            this.button37.BackColor = System.Drawing.Color.White;
+            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button37.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button37.Image = ((System.Drawing.Image)(resources.GetObject("button37.Image")));
+            this.button37.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button37.Location = new System.Drawing.Point(46, 374);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(241, 37);
+            this.button37.TabIndex = 46;
+            this.button37.Text = " RELEVER";
+            this.button37.UseVisualStyleBackColor = false;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
             // 
             // button35
             // 
@@ -555,7 +572,7 @@
             this.pMenuAVance.Controls.Add(this.cbTousLeDepot);
             this.pMenuAVance.Controls.Add(this.button15);
             this.pMenuAVance.Controls.Add(this.button8);
-            this.pMenuAVance.Location = new System.Drawing.Point(24, 435);
+            this.pMenuAVance.Location = new System.Drawing.Point(24, 477);
             this.pMenuAVance.Name = "pMenuAVance";
             this.pMenuAVance.Size = new System.Drawing.Size(298, 75);
             this.pMenuAVance.TabIndex = 41;
@@ -751,7 +768,7 @@
             this.panel14.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel14.Location = new System.Drawing.Point(8, 46);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(580, 507);
+            this.panel14.Size = new System.Drawing.Size(580, 558);
             this.panel14.TabIndex = 28;
             // 
             // tCherche
@@ -797,7 +814,7 @@
             this.DGsommaireSTOCK.Location = new System.Drawing.Point(23, 72);
             this.DGsommaireSTOCK.Name = "DGsommaireSTOCK";
             this.DGsommaireSTOCK.ReadOnly = true;
-            this.DGsommaireSTOCK.Size = new System.Drawing.Size(554, 432);
+            this.DGsommaireSTOCK.Size = new System.Drawing.Size(554, 483);
             this.DGsommaireSTOCK.TabIndex = 18;
             this.DGsommaireSTOCK.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGsommaireSTOCK_CellContentClick);
             // 
@@ -2880,7 +2897,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 32);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(972, 523);
+            this.tabPage7.Size = new System.Drawing.Size(972, 524);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "             DEPOT           ";
             // 
@@ -3400,26 +3417,26 @@
             this.BWinventaire.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BWinventaire_DoWork);
             this.BWinventaire.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BWinventaire_RunWorkerCompleted);
             // 
-            // button37
+            // buttonListeArticles
             // 
-            this.button37.BackColor = System.Drawing.Color.White;
-            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button37.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button37.Image = ((System.Drawing.Image)(resources.GetObject("button37.Image")));
-            this.button37.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button37.Location = new System.Drawing.Point(45, 374);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(241, 37);
-            this.button37.TabIndex = 46;
-            this.button37.Text = " RELEVER";
-            this.button37.UseVisualStyleBackColor = false;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
+            this.buttonListeArticles.BackColor = System.Drawing.Color.White;
+            this.buttonListeArticles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonListeArticles.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonListeArticles.Image = ((System.Drawing.Image)(resources.GetObject("buttonListeArticles.Image")));
+            this.buttonListeArticles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonListeArticles.Location = new System.Drawing.Point(45, 417);
+            this.buttonListeArticles.Name = "buttonListeArticles";
+            this.buttonListeArticles.Size = new System.Drawing.Size(241, 37);
+            this.buttonListeArticles.TabIndex = 47;
+            this.buttonListeArticles.Text = "LISTE ARTICLES";
+            this.buttonListeArticles.UseVisualStyleBackColor = false;
+            this.buttonListeArticles.Click += new System.EventHandler(this.buttonListeArticles_Click);
             // 
             // FormStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 621);
+            this.ClientSize = new System.Drawing.Size(991, 664);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Name = "FormStock";
@@ -3788,5 +3805,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.Button buttonListeArticles;
     }
 }

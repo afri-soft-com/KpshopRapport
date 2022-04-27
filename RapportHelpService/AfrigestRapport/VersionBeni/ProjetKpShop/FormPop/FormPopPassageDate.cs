@@ -70,7 +70,9 @@ namespace GoldenStarApplication.FormPop
 
 
             catch (Exception ex)
-            { MessageBox.Show(" CE SOUS GROUPE  PEUT AVOIR DES COMPTES VOUS POUVEZ SEULEMENT LE MODIFIER " + ex.Message); }
+            { 
+                MessageBox.Show(" CE SOUS GROUPE  PEUT AVOIR DES COMPTES VOUS POUVEZ SEULEMENT LE MODIFIER yANN" + ex.Message); 
+            }
 
         }
         private void button4_Click(object sender, EventArgs e)

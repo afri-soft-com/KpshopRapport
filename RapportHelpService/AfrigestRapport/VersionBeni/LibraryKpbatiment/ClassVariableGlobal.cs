@@ -28,11 +28,12 @@ namespace LibraryKpbatiment
             //Data Source=SQL5061.site4now.net;Initial Catalog=db_a6d169_kpshopdb;User Id=db_a6d169_kpshopdb_admin;Password =12345678GL
 
             // POUR ESSAI YANNICK
-            seteconnexionLoc = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_DB;Integrated Security=false ;User ID=Yan; Password ='123456789'";
+            seteconnexionLoc = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_BENI;Integrated Security=false ;User ID=Yan; Password ='123456789'";
+            //seteconnexionLoc = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_DB;Integrated Security=false ;User ID=Yan; Password ='123456789'";
             //seteconnexionLoc = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_BASE_DONNEE;Integrated Security=false ;User ID=Yan; Password ='123456789'";
 
             // POUR HELP SERVICE
-            //seteconnexionLoc = @"Data Source=SERVEU-HELP\SERVEUHELP;Initial Catalog=HELP_DB;Integrated Security=false ;User ID=HELP2; Password ='123456789'";
+            ////seteconnexionLoc = @"Data Source=SERVEU-HELP\SERVEUHELP;Initial Catalog=HELP_DB;Integrated Security=false ;User ID=HELP2; Password ='123456789'";
 
 
             return seteconnexionLoc;

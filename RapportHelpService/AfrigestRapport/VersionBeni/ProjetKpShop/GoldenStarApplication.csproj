@@ -443,6 +443,31 @@
     <Compile Include="FormVente.Designer.cs">
       <DependentUpon>FormVente.cs</DependentUpon>
     </Compile>
+    <Compile Include="KPSHOP_BENIDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_BENIDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_BENIDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_BENIDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_BENIDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_BENIDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_BENIDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_BENIDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KPSHOP_BENIDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KPSHOP_BENIDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="KPSHOP_DBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -637,6 +662,7 @@
     <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportReleveFactureClient.rdlc" />
     <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportSommaireMvtSeulement.rdlc" />
     <EmbeddedResource Include="bin\Debug\Rapport\Bransimba\ReportSommaireStoctTouts.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Rapport\ReportListArticles.rdlc" />
     <EmbeddedResource Include="bin\Debug\Rapport\Hop\Report2.rdlc" />
     <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportFact.rdlc" />
     <EmbeddedResource Include="bin\Debug\Rapport\Hop\ReportFactueMedicament.rdlc" />
@@ -962,6 +988,61 @@
     <None Include="bin\Debug\GoldenStarApplication.exe.config" />
     <None Include="bin\Debug\GoldenStarApplication.vshost.exe.config" />
     <None Include="bin\Debug\GoldenStarApplication.vshost.exe.manifest" />
+    <None Include="KPSHOP_BENIDataSet.xsc">
+      <DependentUpon>KPSHOP_BENIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_BENIDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_BENIDataSet.xss">
+      <DependentUpon>KPSHOP_BENIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet1.xsc">
+      <DependentUpon>KPSHOP_BENIDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_BENIDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_BENIDataSet1.xss">
+      <DependentUpon>KPSHOP_BENIDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet2.xsc">
+      <DependentUpon>KPSHOP_BENIDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_BENIDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_BENIDataSet2.xss">
+      <DependentUpon>KPSHOP_BENIDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet3.xsc">
+      <DependentUpon>KPSHOP_BENIDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_BENIDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_BENIDataSet3.xss">
+      <DependentUpon>KPSHOP_BENIDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet4.xsc">
+      <DependentUpon>KPSHOP_BENIDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="KPSHOP_BENIDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KPSHOP_BENIDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KPSHOP_BENIDataSet4.xss">
+      <DependentUpon>KPSHOP_BENIDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="KPSHOP_DBDataSet.xsc">
       <DependentUpon>KPSHOP_DBDataSet.xsd</DependentUpon>
     </None>

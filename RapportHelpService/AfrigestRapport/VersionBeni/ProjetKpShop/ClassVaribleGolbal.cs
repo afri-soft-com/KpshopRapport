@@ -24,7 +24,8 @@ namespace WindowsFormsApplication1
           //public static string seteconnexion = @"Data Source=127.0.0.1;Initial Catalog=BaseKpBunia;Integrated Security=false ;User ID=MANDAL; Password =12345678";
           
         // POUR YANNICK
-        public static string seteconnexion = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_DB;Integrated Security=false ;User ID=Yan; Password ='123456789'";
+        public static string seteconnexion = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_BENI;Integrated Security=false ;User ID=Yan; Password ='123456789'";
+        //public static string seteconnexion = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_DB;Integrated Security=false ;User ID=Yan; Password ='123456789'";
         //public static string seteconnexion = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_BASE_DONNEE;Integrated Security=false ;User ID=Yan; Password ='123456789'";
           
         // POUR HELP
