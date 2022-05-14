@@ -18,19 +18,21 @@ namespace WindowsFormsApplication1
        // public static string seteconnexion = "Data Source=127.0.0.1;Initial Catalog=BaseKpShop2;Integrated Security=True";
 
         public static String NomServeur;
-         //public static string seteconnexion = "Data Source=SERVER-KP-SHOP;Initial Catalog=KPSHOP_DB2021;Integrated Security=false ;User ID=KP-SHOP; Password ='123456789'";
+        //public static string seteconnexion = "Data Source=SERVER-KP-SHOP;Initial Catalog=KPSHOP_DB2021;Integrated Security=false ;User ID=KP-SHOP; Password ='123456789'";
 
-         //public static string seteconnexion = @"Data Source=SQL5061.site4now.net;Initial Catalog=db_a6d169_kpshopdb;User Id=db_a6d169_kpshopdb_admin;Password =12345678GL";
-          //public static string seteconnexion = @"Data Source=127.0.0.1;Initial Catalog=BaseKpBunia;Integrated Security=false ;User ID=MANDAL; Password =12345678";
-          
+        //public static string seteconnexion = @"Data Source=SQL5061.site4now.net;Initial Catalog=db_a6d169_kpshopdb;User Id=db_a6d169_kpshopdb_admin;Password =12345678GL";
+        //public static string seteconnexion = @"Data Source=127.0.0.1;Initial Catalog=BaseKpBunia;Integrated Security=false ;User ID=MANDAL; Password =12345678";
+
         // POUR YANNICK
         //public static string seteconnexion = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_BENI;Integrated Security=false ;User ID=Yan; Password ='123456789'";
-        //public static string seteconnexion = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_DB;Integrated Security=false ;User ID=Yan; Password ='123456789'";
+        public static string seteconnexion = @"Data Source=AFRISOFT;Initial Catalog=Kp_ShopDB;Integrated Security=false ;User ID=Yan; Password ='123456789'";
         //public static string seteconnexion = @"Data Source=AFRISOFT;Initial Catalog=KPSHOP_BASE_DONNEE;Integrated Security=false ;User ID=Yan; Password ='123456789'";
-        
+
         // POUR KPSHOP BENI
-        public static string seteconnexion = @"Data Source=KP-SHOP-SERVER;Initial Catalog=BaseKpShop2022;Integrated Security=false ;User ID=KP; Password ='12345678'";
-          
+        //public static string seteconnexion = @"Data Source=KP-SHOP-SERVER;Initial Catalog=BaseKpShop2022;Integrated Security=false ;User ID=KP; Password ='12345678'";
+        //-- ANCIEN BUNIA DANS KPSHOP BENI
+        //public static string seteconnexion = @"Data Source=KP-SHOP-SERVER;Initial Catalog=BaseAncienBunia;Integrated Security=false ;User ID=KP; Password ='12345678'";
+
         // POUR HELP
         //public static string seteconnexion = @"Data Source=SERVEU-HELP\SERVEUHELP;Initial Catalog=HELP_DB;Integrated Security=false ;User ID=HELP2; Password ='123456789'";
 
@@ -44,7 +46,7 @@ namespace WindowsFormsApplication1
         //  public static string seteconnexion = "Data Source=SQL5092.site4now.net;Initial Catalog=DB_A54EFD_kpShop;User Id=DB_A54EFD_kpShop_admin;Password=12345678GL";
 
         //
-       // public static string seteconnexion = "Data Source=KP-SHOP-SERVER;Initial Catalog=BaseKpShop;Integrated Security=false ;User ID=MANDAL; Password =12345678";
+        // public static string seteconnexion = "Data Source=KP-SHOP-SERVER;Initial Catalog=BaseKpShop;Integrated Security=false ;User ID=MANDAL; Password =12345678";
 
         // public static string seteconnexion = "Data Source=PC-SERVEURKP;Initial Catalog=BaseKp;Integrated Security=false ;User ID=kp; Password =12345678";
 
